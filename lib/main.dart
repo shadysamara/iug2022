@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/info.dart';
 import 'package:flutter_application_1/my_widget.dart';
-import 'package:flutter_application_1/responsive_design.dart';
+import 'package:flutter_application_1/pageview_test.dart';
+import 'package:flutter_application_1/responsive_screen.dart';
 import 'package:flutter_application_1/student.dart';
+import 'package:flutter_application_1/tab_test.dart';
 
 void main() {
-  runApp( MaterialApp(home: ResponsiveScreen(),));
+  runApp( MaterialApp(home: PageViewTest(),));
 }
 
 class IugScreen extends StatelessWidget{
@@ -32,29 +34,22 @@ List<JerusalemInfo> data = [
      appBar: AppBar(title: Text('IUG MALES'),),
      body: Column(children: [
        Image.asset('assets/images/jerusalem.jpg'),
-       Expanded(
-         child: GridView.builder(
-         
-           gridDelegate:  SliverGridDelegateWithMaxCrossAxisExtent(
-             maxCrossAxisExtent: 500,
-             crossAxisSpacing: 20,
-             mainAxisSpacing: 20,
-             childAspectRatio: 0.5
-           ),
-         itemCount: data.length,
+      Expanded(
+        child: GridView.builder(
+          
+          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent (
+            maxCrossAxisExtent: 500,
+            mainAxisSpacing: 5,
+            crossAxisSpacing: 5
+     
+          ),
+          itemCount: data.length,
           itemBuilder: (context,index){
-            return MyWidget(data[index]);
+            return Container(
+              alignment: Alignment.center,
+              color: Colors.black87,child: Text(index.toString(),style: TextStyle(color: Colors.white),),);
           }),
-       )
-       // this is listview builder widget
-    //  ListView.builder(
-    //    shrinkWrap: true,
-    //    physics: NeverScrollableScrollPhysics(),
-    //    itemCount: 50,
-    //    itemBuilder: (context,index){
-       
-    //      return MyWidget(data[index]);
-    //    })
+      )
      ],),
    );
   }
