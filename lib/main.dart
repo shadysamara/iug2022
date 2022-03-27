@@ -3,11 +3,13 @@ import 'package:flutter_application_1/info.dart';
 import 'package:flutter_application_1/my_widget.dart';
 import 'package:flutter_application_1/pageview_test.dart';
 import 'package:flutter_application_1/responsive_screen.dart';
+import 'package:flutter_application_1/stateful_lecture/stateful_test.dart';
 import 'package:flutter_application_1/student.dart';
 import 'package:flutter_application_1/tab_test.dart';
+import 'package:flutter_application_1/tabbar_boys.dart';
 
 void main() {
-  runApp( MaterialApp(home: PageViewTest(),));
+  runApp( MaterialApp(home: AcceptConditions(),));
 }
 
 class IugScreen extends StatelessWidget{

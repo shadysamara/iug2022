@@ -7,7 +7,9 @@ class PageViewTest extends StatelessWidget{
     // TODO: implement build
    return Scaffold(appBar:AppBar(
      actions: [IconButton(onPressed: (){
-       controller.animateToPage(2, duration: Duration(seconds: 5), curve: Curves.linear);
+       controller.animateToPage(2, duration: Duration(seconds: 5),
+        curve: Curves.linear);
+    
      }, icon: Icon(Icons.edit))],
    ),
    body: PageView(
